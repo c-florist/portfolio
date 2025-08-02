@@ -4,7 +4,6 @@
 @theme {
   --font-family-sans: 'Inter', sans-serif;
 
-  /* Minimalist Canvas Palette */
   --color-zinc-50: oklch(0.988 0.003 298.9);
   --color-zinc-100: oklch(0.965 0.006 298.9);
   --color-zinc-200: oklch(0.914 0.011 298.9);
@@ -17,7 +16,6 @@
   --color-zinc-900: oklch(0.341 0.027 298.9);
   --color-zinc-950: oklch(0.239 0.024 298.9);
 
-  /* Custom Prose Theme (for light background) */
   --prose-body: theme(colors.zinc.700);
   --prose-headings: theme(colors.zinc.950);
   --prose-links: theme(colors.zinc.950);

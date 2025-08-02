@@ -1,7 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.0.6/schema.json",
   "files": {
-    "includes": ["src/**/*.ts", "astro.config.ts"]
+    "includes": ["src/**/*.ts", "astro.config.ts", "src/**/*.astro"]
   },
   "formatter": {
     "enabled": true,
@@ -46,7 +46,7 @@
   },
   "overrides": [
     {
-      "includes": ["**/*.astro"],
+      "includes": ["src/**/*.astro"],
       "linter": {
         "rules": {
           "style": {
