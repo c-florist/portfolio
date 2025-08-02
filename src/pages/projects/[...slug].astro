@@ -24,47 +24,49 @@ const nextProject = projects[currentIndex + 1];
 ---
 
 <Layout title={`${project.data.title} | Connor Flowers`}>
-  <article class="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-    <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-center mb-16">{project.data.title}</h1>
+  <article class="px-4 py-16 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-center mb-16">{project.data.title}</h1>
 
-    <Image
-      src={project.data.heroImage}
-      alt={`Hero image for ${project.data.title}`}
-      width={1200}
-      height={800}
-      class="w-full mb-24"
-    />
+      <Image
+        src={project.data.heroImage}
+        alt={`Hero image for ${project.data.title}`}
+        width={1200}
+        height={800}
+        class="w-full mb-24"
+      />
 
-    <div class="prose prose-invert max-w-4xl mx-auto">
-      <Content />
+      <div class="prose prose-invert max-w-none">
+        <Content />
 
-      {project.data.liveUrl && (
-        <a
-          href={project.data.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block bg-transparent border border-slate-700 text-slate-300 font-medium py-3 px-8 hover:bg-slate-800 hover:text-slate-100 transition-colors no-underline mt-12"
-        >
-          View Live Project
-        </a>
-      )}
+        {project.data.liveUrl && (
+          <a
+            href={project.data.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-transparent border border-slate-700 text-slate-300 font-medium py-3 px-8 hover:bg-slate-800 hover:text-slate-100 transition-colors no-underline mt-12"
+          >
+            View Live Project
+          </a>
+        )}
+      </div>
+
+      <nav class="flex justify-between mt-24 pt-8 border-t border-slate-800">
+        <div>
+          {prevProject && (
+            <a href={`/projects/${prevProject.slug}`} class="hover:text-slate-50 transition-colors">
+              &larr; {prevProject.data.title}
+            </a>
+          )}
+        </div>
+        <div>
+          {nextProject && (
+            <a href={`/projects/${nextProject.slug}`} class="hover:text-slate-50 transition-colors">
+              {nextProject.data.title} &rarr;
+            </a>
+          )}
+        </div>
+      </nav>
     </div>
-
-    <nav class="flex justify-between mt-24 pt-8 border-t border-slate-800 max-w-4xl mx-auto">
-      <div>
-        {prevProject && (
-          <a href={`/projects/${prevProject.slug}`} class="hover:text-slate-50 transition-colors">
-            &larr; {prevProject.data.title}
-          </a>
-        )}
-      </div>
-      <div>
-        {nextProject && (
-          <a href={`/projects/${nextProject.slug}`} class="hover:text-slate-50 transition-colors">
-            {nextProject.data.title} &rarr;
-          </a>
-        )}
-      </div>
-    </nav>
   </article>
 </Layout>
