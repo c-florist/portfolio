@@ -5,6 +5,7 @@ const projectsCollection = defineCollection({
   schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
+    publishDate: z.coerce.date(),
     heroImage: image(),
     liveUrl: z.string().url().optional(),
     repoUrl: z.string().url().optional(),
