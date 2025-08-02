@@ -26,7 +26,7 @@ const nextProject = projects[currentIndex + 1];
 <Layout title={`${project.data.title} | Connor Flowers`}>
   <article class="px-4 py-16 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
-      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-center mb-16">{project.data.title}</h1>
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-16 text-zinc-950">{project.data.title}</h1>
 
       <Image
         src={project.data.heroImage}
@@ -36,7 +36,7 @@ const nextProject = projects[currentIndex + 1];
         class="w-full mb-24"
       />
 
-      <div class="prose prose-invert max-w-none">
+      <div class="prose max-w-none">
         <Content />
 
         {project.data.liveUrl && (
@@ -44,24 +44,24 @@ const nextProject = projects[currentIndex + 1];
             href={project.data.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block bg-transparent border border-slate-700 text-slate-300 font-medium py-3 px-8 hover:bg-slate-800 hover:text-slate-100 transition-colors no-underline mt-12"
+            class="inline-block bg-transparent border border-zinc-300 text-zinc-700 font-medium py-3 px-8 hover:bg-zinc-100 hover:text-zinc-900 transition-colors no-underline mt-12"
           >
             View Live Project
           </a>
         )}
       </div>
 
-      <nav class="flex justify-between mt-24 pt-8 border-t border-slate-800">
+      <nav class="flex justify-between mt-24 pt-8 border-t border-zinc-200">
         <div>
           {prevProject && (
-            <a href={`/projects/${prevProject.slug}`} class="hover:text-slate-50 transition-colors">
+            <a href={`/projects/${prevProject.slug}`} class="hover:text-zinc-900 transition-colors">
               &larr; {prevProject.data.title}
             </a>
           )}
         </div>
         <div>
           {nextProject && (
-            <a href={`/projects/${nextProject.slug}`} class="hover:text-slate-50 transition-colors">
+            <a href={`/projects/${nextProject.slug}`} class="hover:text-zinc-900 transition-colors">
               {nextProject.data.title} &rarr;
             </a>
           )}
