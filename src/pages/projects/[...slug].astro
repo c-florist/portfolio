@@ -35,17 +35,17 @@ const nextProject = projects[currentIndex + 1];
       class="w-full mb-24"
     />
 
-    <div class="prose prose-invert max-w-4xl mx-auto">
+    <div class="prose prose-invert max-w-3xl mx-auto">
       <Content />
 
       {project.data.liveUrl && (
-        <a 
-          href={project.data.liveUrl} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="inline-block bg-transparent border border-stone-700 text-stone-300 font-medium py-3 px-8 hover:bg-stone-800 hover:text-white transition-colors no-underline mt-12"
+        <a
+          href={project.data.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block bg-transparent border border-stone-700 text-stone-300 font-medium py-3 px-8 hover:bg-stone-800 hover:text-white transition-colors no-underline mt-8"
         >
-          View Live Project
+          View live project
         </a>
       )}
     </div>
