@@ -4,29 +4,31 @@
 @theme {
   --font-family-sans: 'Inter', sans-serif;
 
-  --color-zinc-50: oklch(0.988 0.003 298.9);
-  --color-zinc-100: oklch(0.965 0.006 298.9);
-  --color-zinc-200: oklch(0.914 0.011 298.9);
-  --color-zinc-300: oklch(0.855 0.016 298.9);
-  --color-zinc-400: oklch(0.788 0.02 298.9);
-  --color-zinc-500: oklch(0.711 0.023 298.9);
-  --color-zinc-600: oklch(0.624 0.026 298.9);
-  --color-zinc-700: oklch(0.533 0.028 298.9);
-  --color-zinc-800: oklch(0.439 0.028 298.9);
-  --color-zinc-900: oklch(0.341 0.027 298.9);
-  --color-zinc-950: oklch(0.239 0.024 298.9);
+  /* Warm Stone Palette */
+  --color-stone-50: oklch(0.988 0.004 85.3);
+  --color-stone-100: oklch(0.965 0.008 85.3);
+  --color-stone-200: oklch(0.914 0.015 85.3);
+  --color-stone-300: oklch(0.855 0.022 85.3);
+  --color-stone-400: oklch(0.788 0.028 85.3);
+  --color-stone-500: oklch(0.711 0.032 85.3);
+  --color-stone-600: oklch(0.624 0.035 85.3);
+  --color-stone-700: oklch(0.533 0.037 85.3);
+  --color-stone-800: oklch(0.439 0.036 85.3);
+  --color-stone-900: oklch(0.341 0.034 85.3);
+  --color-stone-950: oklch(0.239 0.03 85.3);
 
-  --prose-body: theme(colors.zinc.700);
-  --prose-headings: theme(colors.zinc.950);
-  --prose-links: theme(colors.zinc.950);
-  --prose-bold: theme(colors.zinc.950);
-  --prose-counters: theme(colors.zinc.500);
-  --prose-bullets: theme(colors.zinc.400);
-  --prose-hr: theme(colors.zinc.200);
-  --prose-quotes: theme(colors.zinc.900);
-  --prose-quote-borders: theme(colors.zinc.200);
-  --prose-captions: theme(colors.zinc.500);
-  --prose-code: theme(colors.zinc.900);
-  --prose-pre-code: theme(colors.zinc.900);
-  --prose-pre-bg: theme(colors.zinc.100);
+  /* Custom Prose Theme (for warm light background) */
+  --prose-body: theme(colors.stone.700);
+  --prose-headings: theme(colors.stone.900);
+  --prose-links: theme(colors.stone.900);
+  --prose-bold: theme(colors.stone.900);
+  --prose-counters: theme(colors.stone.500);
+  --prose-bullets: theme(colors.stone.400);
+  --prose-hr: theme(colors.stone.200);
+  --prose-quotes: theme(colors.stone.900);
+  --prose-quote-borders: theme(colors.stone.200);
+  --prose-captions: theme(colors.stone.500);
+  --prose-code: theme(colors.stone.900);
+  --prose-pre-code: theme(colors.stone.900);
+  --prose-pre-bg: theme(colors.stone.100);
 }
