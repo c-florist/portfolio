@@ -3,7 +3,7 @@ title: "Formicarium"
 description: "A real-time simulation of an ant colony, built to visualise the emergent behavior of ants (for fun)."
 heroImage: "../../public/projects/formicarium.png"
 liveUrl: "https://formicarium.connorflowers.dev"
-repoUrl: "https://github.com/your-username/formicarium"
+repoUrl: "https://github.com/c-florist/formicarium"
 technologies: ["Rust", "WebAssembly", "SvelteKit"]
 ---
 
