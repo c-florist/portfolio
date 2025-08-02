@@ -1,0 +1,65 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(project => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+
+// For "next/prev" navigation
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.publishDate.valueOf() - b.data.publishDate.valueOf()
+);
+const currentIndex = projects.findIndex(p => p.slug === project.slug);
+const prevProject = projects[currentIndex - 1];
+const nextProject = projects[currentIndex + 1];
+---
+
+<Layout title={`${project.data.title} | Connor Flowers`}>
+  <article class="max-w-4xl mx-auto p-8">
+    <h1 class="text-5xl font-bold tracking-tighter text-center mb-8">{project.data.title}</h1>
+
+    <Image
+      src={project.data.heroImage}
+      alt={`Hero image for ${project.data.title}`}
+      width={1200}
+      height={800}
+      class="mb-12"
+    />
+
+    <div class="prose prose-invert max-w-none mx-auto">
+      <Content />
+
+      {project.data.liveUrl && (
+        <a href={project.data.liveUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors no-underline mt-8">
+          View live project
+        </a>
+      )}
+    </div>
+
+    <nav class="flex justify-between mt-16 pt-8 border-t border-stone-800">
+      <div>
+        {prevProject && (
+          <a href={`/projects/${prevProject.slug}`} class="hover:text-stone-300 transition-colors">
+            &larr; {prevProject.data.title}
+          </a>
+        )}
+      </div>
+      <div>
+        {nextProject && (
+          <a href={`/projects/${nextProject.slug}`} class="hover:text-stone-300 transition-colors">
+            {nextProject.data.title} &rarr;
+          </a>
+        )}
+      </div>
+    </nav>
+  </article>
+</Layout>

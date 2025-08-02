@@ -8,10 +8,10 @@ repoUrl: "https://github.com/c-florist/formicarium"
 technologies: ["Rust", "WebAssembly", "SvelteKit"]
 ---
 
-### Introduction
+# Introduction
 
 This is a placeholder introduction for the Formicarium project. Here you can describe what the project is, what it does, and why you built it.
 
-### Inspiration
+# Inspiration
 
 This is a placeholder for the inspiration behind the project. You can talk about what sparked the idea, what you were hoping to learn, or any specific challenges you wanted to tackle.
