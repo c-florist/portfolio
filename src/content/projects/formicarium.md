@@ -5,7 +5,7 @@ publishDate: "2025-08-02"
 heroImage: "./hero.png"
 liveUrl: "https://formicarium.connorflowers.dev"
 repoUrl: "https://github.com/c-florist/formicarium"
-technologies: ["Rust", "WebAssembly", "SvelteKit"]
+technologies: ["Rust", "WebAssembly", "PixiJS"]
 ---
 
 # Overview
