@@ -8,10 +8,14 @@ repoUrl: "https://github.com/c-florist/formicarium"
 technologies: ["Rust", "WebAssembly", "SvelteKit"]
 ---
 
-# Introduction
+# Overview
 
-This is a placeholder introduction for the Formicarium project. Here you can describe what the project is, what it does, and why you built it.
+> noun: formicarium
+>
+> An ant's nest, especially one in an artificial container for purposes of study.
 
-# Inspiration
+Formicarium is a real-time ant colony simulation that runs directly in your browser. The core simulation logic, which governs ant behavior, pheromone-based pathfinding, and environmental interactions, is built in Rust and compiled to WebAssembly (WASM). The visualization layer sits on top of this core logic, rendered using PixiJS with some cute sprites I found.
 
-This is a placeholder for the inspiration behind the project. You can talk about what sparked the idea, what you were hoping to learn, or any specific challenges you wanted to tackle.
+I had the idea for this after absentmindedly watching a column of ants doggedly trudge from a pile of crumbs I dropped to, presumably, their nest. I got curious about how one might model the behaviour of both ants and the environment they inhabit and interact with.
+
+You can provide some starting parameters to see how the simulation behaves, give it a go below.

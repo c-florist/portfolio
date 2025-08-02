@@ -37,6 +37,7 @@ const nextProject = projects[currentIndex + 1];
       <div class="prose max-w-none">
         <Content />
 
+        <div class="space-x-4">
         {project.data.liveUrl && (
           <a
             href={project.data.liveUrl}
@@ -44,12 +45,24 @@ const nextProject = projects[currentIndex + 1];
             rel="noopener noreferrer"
             class="inline-block bg-transparent border border-zinc-400 text-zinc-800 font-medium py-3 px-8 hover:bg-zinc-100 hover:text-zinc-950 transition-colors no-underline mt-12"
           >
-            View Live Project
+            View live project
           </a>
         )}
+
+        {project.data.repoUrl && (
+          <a
+            href={project.data.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-transparent border border-zinc-400 text-zinc-800 font-medium py-3 px-8 hover:bg-zinc-100 hover:text-zinc-950 transition-colors no-underline mt-12"
+          >
+            View source
+          </a>
+        )}
+        </div>
       </div>
 
-      <nav class="flex justify-between mt-24 pt-8 border-t border-zinc-200">
+      <nav class="flex justify-between mt-24 pt-8">
         <div>
           {prevProject && (
             <a href={`/projects/${prevProject.slug}`} class="hover:text-zinc-900 transition-colors">
