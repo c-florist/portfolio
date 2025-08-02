@@ -1,0 +1,16 @@
+---
+title: "Formicarium"
+description: "A real-time simulation of an ant colony, built to visualise the emergent behavior of ants (for fun)."
+heroImage: "../../public/projects/formicarium.png"
+liveUrl: "https://formicarium.connorflowers.dev"
+repoUrl: "https://github.com/your-username/formicarium"
+technologies: ["Rust", "WebAssembly", "SvelteKit"]
+---
+
+### Introduction
+
+This is a placeholder introduction for the Formicarium project. Here you can describe what the project is, what it does, and why you built it.
+
+### Inspiration
+
+This is a placeholder for the inspiration behind the project. You can talk about what sparked the idea, what you were hoping to learn, or any specific challenges you wanted to tackle.
