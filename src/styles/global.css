@@ -1,6 +1,32 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
+@import "@tailwindcss/typography";
 
 @theme {
   --font-family-sans: 'Inter', sans-serif;
+
+  --color-slate-50: oklch(0.98 0.01 264);
+  --color-slate-100: oklch(0.95 0.02 264);
+  --color-slate-200: oklch(0.9 0.03 264);
+  --color-slate-300: oklch(0.84 0.04 264);
+  --color-slate-400: oklch(0.77 0.05 264);
+  --color-slate-500: oklch(0.69 0.06 264);
+  --color-slate-600: oklch(0.6 0.06 264);
+  --color-slate-700: oklch(0.51 0.05 264);
+  --color-slate-800: oklch(0.42 0.04 264);
+  --color-slate-900: oklch(0.34 0.03 264);
+  --color-slate-950: oklch(0.25 0.02 264);
+
+  --prose-body: theme(colors.slate.300);
+  --prose-headings: theme(colors.slate.100);
+  --prose-links: theme(colors.slate.50);
+  --prose-bold: theme(colors.slate.100);
+  --prose-counters: theme(colors.slate.500);
+  --prose-bullets: theme(colors.slate.600);
+  --prose-hr: theme(colors.slate.800);
+  --prose-quotes: theme(colors.slate.100);
+  --prose-quote-borders: theme(colors.slate.700);
+  --prose-captions: theme(colors.slate.400);
+  --prose-code: theme(colors.slate.200);
+  --prose-pre-code: theme(colors.slate.200);
+  --prose-pre-bg: theme(colors.slate.900);
 }

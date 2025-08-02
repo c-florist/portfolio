@@ -35,7 +35,7 @@ const nextProject = projects[currentIndex + 1];
       class="w-full mb-24"
     />
 
-    <div class="prose prose-invert max-w-3xl mx-auto">
+    <div class="prose prose-invert max-w-4xl mx-auto">
       <Content />
 
       {project.data.liveUrl && (
@@ -43,24 +43,24 @@ const nextProject = projects[currentIndex + 1];
           href={project.data.liveUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-block bg-transparent border border-stone-700 text-stone-300 font-medium py-3 px-8 hover:bg-stone-800 hover:text-white transition-colors no-underline mt-8"
+          class="inline-block bg-transparent border border-slate-700 text-slate-300 font-medium py-3 px-8 hover:bg-slate-800 hover:text-slate-100 transition-colors no-underline mt-12"
         >
-          View live project
+          View Live Project
         </a>
       )}
     </div>
 
-    <nav class="flex justify-between mt-24 pt-8 border-t border-stone-800 max-w-4xl mx-auto">
+    <nav class="flex justify-between mt-24 pt-8 border-t border-slate-800 max-w-4xl mx-auto">
       <div>
         {prevProject && (
-          <a href={`/projects/${prevProject.slug}`} class="hover:text-stone-300 transition-colors">
+          <a href={`/projects/${prevProject.slug}`} class="hover:text-slate-50 transition-colors">
             &larr; {prevProject.data.title}
           </a>
         )}
       </div>
       <div>
         {nextProject && (
-          <a href={`/projects/${nextProject.slug}`} class="hover:text-stone-300 transition-colors">
+          <a href={`/projects/${nextProject.slug}`} class="hover:text-slate-50 transition-colors">
             {nextProject.data.title} &rarr;
           </a>
         )}
