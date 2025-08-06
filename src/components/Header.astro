@@ -2,6 +2,9 @@
 const { pathname } = Astro.url;
 const activeClass = "active";
 ---
+<script>
+  console.log("Current pathname:", Astro.url.pathname);
+</script>
 <header class="sticky top-0 z-50 p-4 bg-white/80 backdrop-blur-sm">
   <nav class="flex justify-between items-center">
     <a href="/" class="text-2xl font-semibold text-light-text">CONNOR FLOWERS</a>
@@ -9,13 +12,13 @@ const activeClass = "active";
       <li>
         <a href="/#projects" class:list={["nav-link", { [activeClass]: pathname === '/' || pathname.startsWith('/projects') }]}>
           <span>Portfolio</span>
-          <span class="underline-span" transition:name="nav-underline"></span>
+          <span class="underline-span"></span>
         </a>
       </li>
       <li>
-        <a href="/about" class:list={["nav-link", { [activeClass]: pathname === '/about' }]}>
+        <a href="/about" class:list={["nav-link", { [activeClass]: pathname.startsWith('/about') }]}>
           <span>About</span>
-          <span class="underline-span" transition:name="nav-underline-about"></span>
+          <span class="underline-span"></span>
         </a>
       </li>
     </ul>
