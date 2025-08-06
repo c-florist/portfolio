@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-family-mono: 'Fira Code', monospace;
-  --font-family-sans: 'Fira Code', monospace;
+  --font-sans: "Space Grotesk", sans-serif;
 
   --color-light-bg: oklch(98% 0.01 240);
   --color-light-text: oklch(21.76% 0.013 276.23);
@@ -27,7 +27,4 @@
 
 html {
 	background-color: theme(colors.light.bg);
-	color: theme(colors.light.text);
-	font-family: theme(fontFamily.mono);
 }
-
