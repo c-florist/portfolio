@@ -5,7 +5,6 @@
 @theme {
   --font-sans: "Space Grotesk", sans-serif;
 
-  --color-light-bg: oklch(98% 0.01 240);
   --color-light-text: oklch(21.76% 0.013 276.23);
   --color-light-accent-primary: oklch(65% 0.15 180);
   --color-light-muted: oklch(86.03% 0.011 275.71);
@@ -23,8 +22,4 @@
   --prose-code: var(--color-light-text);
   --prose-pre-code: var(--color-light-text);
   --prose-pre-bg: var(--color-light-muted);
-}
-
-html {
-	background-color: theme(colors.light.bg);
 }
