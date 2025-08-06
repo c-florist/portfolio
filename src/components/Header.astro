@@ -1,11 +1,52 @@
 ---
+const { pathname } = Astro.url;
+const activeClass = "active";
 ---
 <header class="sticky top-0 z-50 p-4 bg-light-bg/80 backdrop-blur-sm">
   <nav class="flex justify-between items-center">
     <a href="/" class="text-2xl font-semibold text-light-text">CONNOR FLOWERS</a>
     <ul class="flex gap-4 md:gap-6 items-center text-light-text text-lg font-semibold">
-      <li><a href="/#projects" class="relative group"><span>Portfolio</span><span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-light-accent transition-all duration-300 group-hover:w-full"></span></a></li>
-      <li><a href="/about" class="relative group"><span>About</span><span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-light-accent transition-all duration-300 group-hover:w-full"></span></a></li>
+      <li>
+        <a href="/#projects" class:list={["nav-link", { [activeClass]: pathname === '/' || pathname.startsWith('/projects') }]}>
+          <span>Portfolio</span>
+          <span class="underline-span" transition:name="nav-underline"></span>
+        </a>
+      </li>
+      <li>
+        <a href="/about" class:list={["nav-link", { [activeClass]: pathname === '/about' }]}>
+          <span>About</span>
+          <span class="underline-span" transition:name="nav-underline-about"></span>
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
+
+<style>
+  .nav-link {
+    position: relative;
+    display: inline-block;
+  }
+
+  .underline-span {
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--color-light-accent-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+  }
+
+  .nav-link:hover .underline-span,
+  .nav-link.active .underline-span {
+    transform: scaleX(1);
+  }
+
+  /* Make the underline present on the non-active link for the transition */
+  .nav-link.active + li .nav-link .underline-span {
+      transform: scaleX(0) !important;
+  }
+</style>

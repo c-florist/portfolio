@@ -9,7 +9,7 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<a href={`/projects/${project.slug}`} class="block border border-light-text group transition-all duration-300 hover:border-light-accent">
+<a href={`/projects/${project.slug}`} class="project-card block border border-light-text group transition-all duration-300 hover:border-light-accent-primary">
   <div class="overflow-hidden">
     <Image
       src={project.data.heroImage}

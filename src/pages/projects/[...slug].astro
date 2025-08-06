@@ -26,7 +26,7 @@ const nextProject = projects[currentIndex + 1];
 <Layout title={`${project.data.title} | Connor Flowers`}>
   <article class="px-4 py-16 sm:px-6 lg:px-8">
     <div class="max-w-11/12 mx-auto">
-      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-16 text-stone-950">{project.data.title}</h1>
+      <h1 class="text-5xl md:text-7xl font-bold mb-16 text-light-text">{project.data.title}</h1>
 
       <Image
         src={project.data.heroImage}
@@ -43,7 +43,7 @@ const nextProject = projects[currentIndex + 1];
             href={project.data.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block bg-transparent border border-stone-400 text-stone-800 font-medium py-3 px-8 hover:bg-stone-200 hover:text-stone-950 transition-colors no-underline mt-12"
+            class="inline-block bg-transparent border border-light-text text-light-text font-medium py-3 px-8 hover:border-light-accent-primary hover:text-light-accent-primary transition-colors no-underline mt-12"
           >
             View live project
           </a>
@@ -54,7 +54,7 @@ const nextProject = projects[currentIndex + 1];
             href={project.data.repoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block bg-transparent border border-stone-400 text-stone-800 font-medium py-3 px-8 hover:bg-stone-200 hover:text-stone-950 transition-colors no-underline mt-12"
+            class="inline-block bg-transparent border border-light-text text-light-text font-medium py-3 px-8 hover:border-light-accent-primary hover:text-light-accent-primary transition-colors no-underline mt-12"
           >
             View source
           </a>
@@ -62,17 +62,17 @@ const nextProject = projects[currentIndex + 1];
         </div>
       </div>
 
-      <nav class="flex justify-between mt-24 pt-8">
+      <nav class="flex justify-between mt-24 pt-8 border-t border-light-muted">
         <div>
           {prevProject && (
-            <a href={`/projects/${prevProject.slug}`} class="hover:text-stone-900 transition-colors">
+            <a href={`/projects/${prevProject.slug}`} class="text-light-text hover:text-light-accent-primary transition-colors">
               &larr; {prevProject.data.title}
             </a>
           )}
         </div>
         <div>
           {nextProject && (
-            <a href={`/projects/${nextProject.slug}`} class="hover:text-stone-900 transition-colors">
+            <a href={`/projects/${nextProject.slug}`} class="text-light-text hover:text-light-accent-primary transition-colors">
               {nextProject.data.title} &rarr;
             </a>
           )}

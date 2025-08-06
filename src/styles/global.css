@@ -2,19 +2,17 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-family-mono: 'IBM Plex Mono', monospace;
-  --font-family-sans: 'IBM Plex Mono', monospace;
+  --font-family-mono: 'Fira Code', monospace;
+  --font-family-sans: 'Fira Code', monospace;
 
-  /* Glitch-inspired Light Theme */
-  --color-light-bg: oklch(99.51% 0.005 275.08);
+  --color-light-bg: oklch(98% 0.01 240);
   --color-light-text: oklch(21.76% 0.013 276.23);
-  --color-light-accent: oklch(0.766 0.1483 176.69);
+  --color-light-accent-primary: oklch(65% 0.15 180);
   --color-light-muted: oklch(86.03% 0.011 275.71);
 
-  /* Custom Prose Theme */
   --prose-body: var(--color-light-text);
   --prose-headings: var(--color-light-text);
-  --prose-links: var(--color-light-accent);
+  --prose-links: var(--color-light-accent-primary);
   --prose-bold: var(--color-light-text);
   --prose-counters: var(--color-light-muted);
   --prose-bullets: var(--color-light-muted);
@@ -32,3 +30,4 @@ html {
 	color: theme(colors.light.text);
 	font-family: theme(fontFamily.mono);
 }
+
