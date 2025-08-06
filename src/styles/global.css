@@ -2,33 +2,33 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --font-family-sans: 'Inter', sans-serif;
+  --font-family-mono: 'IBM Plex Mono', monospace;
+  --font-family-sans: 'IBM Plex Mono', monospace;
 
-  /* Warm Stone Palette */
-  --color-stone-50: oklch(0.988 0.004 85.3);
-  --color-stone-100: oklch(0.965 0.008 85.3);
-  --color-stone-200: oklch(0.914 0.015 85.3);
-  --color-stone-300: oklch(0.855 0.022 85.3);
-  --color-stone-400: oklch(0.788 0.028 85.3);
-  --color-stone-500: oklch(0.711 0.032 85.3);
-  --color-stone-600: oklch(0.624 0.035 85.3);
-  --color-stone-700: oklch(0.533 0.037 85.3);
-  --color-stone-800: oklch(0.439 0.036 85.3);
-  --color-stone-900: oklch(0.341 0.034 85.3);
-  --color-stone-950: oklch(0.239 0.03 85.3);
+  /* Glitch-inspired Light Theme */
+  --color-light-bg: oklch(99.51% 0.005 275.08);
+  --color-light-text: oklch(21.76% 0.013 276.23);
+  --color-light-accent: oklch(0.766 0.1483 176.69);
+  --color-light-muted: oklch(86.03% 0.011 275.71);
 
-  /* Custom Prose Theme (for warm light background) */
-  --prose-body: theme(colors.stone.700);
-  --prose-headings: theme(colors.stone.900);
-  --prose-links: theme(colors.stone.900);
-  --prose-bold: theme(colors.stone.900);
-  --prose-counters: theme(colors.stone.500);
-  --prose-bullets: theme(colors.stone.400);
-  --prose-hr: theme(colors.stone.200);
-  --prose-quotes: theme(colors.stone.900);
-  --prose-quote-borders: theme(colors.stone.200);
-  --prose-captions: theme(colors.stone.500);
-  --prose-code: theme(colors.stone.900);
-  --prose-pre-code: theme(colors.stone.900);
-  --prose-pre-bg: theme(colors.stone.100);
+  /* Custom Prose Theme */
+  --prose-body: var(--color-light-text);
+  --prose-headings: var(--color-light-text);
+  --prose-links: var(--color-light-accent);
+  --prose-bold: var(--color-light-text);
+  --prose-counters: var(--color-light-muted);
+  --prose-bullets: var(--color-light-muted);
+  --prose-hr: var(--color-light-muted);
+  --prose-quotes: var(--color-light-text);
+  --prose-quote-borders: var(--color-light-muted);
+  --prose-captions: var(--color-light-muted);
+  --prose-code: var(--color-light-text);
+  --prose-pre-code: var(--color-light-text);
+  --prose-pre-bg: var(--color-light-muted);
+}
+
+html {
+	background-color: theme(colors.light.bg);
+	color: theme(colors.light.text);
+	font-family: theme(fontFamily.mono);
 }
