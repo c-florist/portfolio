@@ -4,28 +4,38 @@ import type { CollectionEntry } from "astro:content";
 
 interface Props {
   project: CollectionEntry<"projects">;
+  glitch: boolean;
 }
 
-const { project } = Astro.props;
+const { project, glitch } = Astro.props;
 ---
 <script>
   import { PowerGlitch } from "powerglitch";
 
-  const initGlitch = () => {
-    PowerGlitch.glitch(".glitch", {
-      playMode: "hover",
-      glitchTimeSpan: { start: 0.2, end: 0.6 },
-      timing: { duration: 175 },
-      slice: { count: 4, velocity: 18, maxHeight: 0.07 },
-      shake: false,
-    });
-  }
+  document.addEventListener("astro:page-load", () => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
 
-  initGlitch();
-  document.addEventListener("astro:page-load", initGlitch);
+    if (mediaQuery.matches) {
+      PowerGlitch.glitch(".glitch", {
+        playMode: "hover",
+        glitchTimeSpan: { start: 0.2, end: 0.6 },
+        timing: { duration: 175 },
+        slice: { count: 4, velocity: 18, maxHeight: 0.07 },
+        shake: false,
+      });
+    } else {
+      PowerGlitch.glitch(".glitch", {
+        playMode: "always",
+        glitchTimeSpan: { start: 0.21, end: 0.22 },
+        timing: { duration: 10_000 },
+        slice: { count: 4, velocity: 18, maxHeight: 0.07 },
+        shake: false,
+      });
+    }
+  });
 </script>
 
-<a href={`/projects/${project.slug}`} class="project-card block border border-light-text group transition-all duration-300 hover:border-light-accent-primary glitch">
+<a href={`/projects/${project.slug}`} class={`project-card block border border-light-text group transition-all duration-300 hover:border-light-accent-primary ${glitch ? 'glitch' : ''}`}>
   <div class="overflow-hidden">
     <Image
       src={project.data.heroImage}
