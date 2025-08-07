@@ -2,9 +2,6 @@
 const { pathname } = Astro.url;
 const activeClass = "active";
 ---
-<script>
-  console.log("Current pathname:", Astro.url.pathname);
-</script>
 <header class="sticky top-0 z-50 p-4 bg-white/80 backdrop-blur-sm">
   <nav class="flex justify-between items-center">
     <a href="/" class="text-2xl font-semibold text-light-text">CONNOR FLOWERS</a>
@@ -12,13 +9,13 @@ const activeClass = "active";
       <li>
         <a href="/#projects" class:list={["nav-link", { [activeClass]: pathname === '/' || pathname.startsWith('/projects') }]}>
           <span>Portfolio</span>
-          <span class="underline-span"></span>
+          <span class="underline"></span>
         </a>
       </li>
       <li>
         <a href="/about" class:list={["nav-link", { [activeClass]: pathname.startsWith('/about') }]}>
           <span>About</span>
-          <span class="underline-span"></span>
+          <span class="underline"></span>
         </a>
       </li>
     </ul>
@@ -31,7 +28,7 @@ const activeClass = "active";
     display: inline-block;
   }
 
-  .underline-span {
+  .underline {
     position: absolute;
     bottom: -0.25rem;
     left: 0;
@@ -43,13 +40,8 @@ const activeClass = "active";
     transform-origin: center;
   }
 
-  .nav-link:hover .underline-span,
-  .nav-link.active .underline-span {
+  .nav-link:hover .underline,
+  .nav-link.active .underline {
     transform: scaleX(1);
-  }
-
-  /* Make the underline present on the non-active link for the transition */
-  .nav-link.active + li .nav-link .underline-span {
-      transform: scaleX(0) !important;
   }
 </style>
