@@ -10,7 +10,19 @@ const { project } = Astro.props;
 ---
 <script>
   import { PowerGlitch } from "powerglitch";
-  PowerGlitch.glitch(".glitch", { playMode: "hover", timing: { duration: 200 }, slice: { count: 6, velocity: 25, maxHeight: 0.07} });
+
+  const initGlitch = () => {
+    PowerGlitch.glitch(".glitch", {
+      playMode: "hover",
+      glitchTimeSpan: { start: 0.2, end: 0.6 },
+      timing: { duration: 200 },
+      slice: { count: 8, velocity: 25, maxHeight: 0.07 },
+      shake: false,
+    });
+  }
+
+  initGlitch();
+  document.addEventListener("astro:page-load", initGlitch);
 </script>
 
 <a href={`/projects/${project.slug}`} class="project-card block border border-light-text group transition-all duration-300 hover:border-light-accent-primary glitch">
@@ -18,7 +30,7 @@ const { project } = Astro.props;
     <Image
       src={project.data.heroImage}
       alt={`Screenshot of ${project.data.title}`}
-      class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+      class="w-full h-full object-cover transition-transform group-hover:scale-102"
     />
   </div>
   <div class="p-8">
