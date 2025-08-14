@@ -26,9 +26,9 @@ const { project, glitch } = Astro.props;
     } else {
       PowerGlitch.glitch(".glitch", {
         playMode: "always",
-        glitchTimeSpan: { start: 0.21, end: 0.22 },
+        glitchTimeSpan: { start: 0.2, end: 0.21 },
         timing: { duration: 10_000 },
-        slice: { count: 4, velocity: 18, maxHeight: 0.07 },
+        slice: { count: 3, velocity: 12, maxHeight: 0.07 },
         shake: false,
       });
     }
