@@ -2,7 +2,7 @@
 title: "Formicarium"
 description: "A simulation of an ant colony, built to explore behavioural patterns."
 publishDate: "2025-08-02"
-heroImage: "./hero.png"
+heroImage: "./formicarium-hero.png"
 liveUrl: "https://formicarium.connorflowers.dev"
 repoUrl: "https://github.com/c-florist/formicarium"
 technologies: ["Rust", "WebAssembly", "PixiJS"]
